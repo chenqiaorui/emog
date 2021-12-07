@@ -1,0 +1,93 @@
+version: '3.5'
+services:
+    bbu-app:
+        image: ricky/java
+        container_name: bbu
+        restart: always
+        ports:
+            - "8080:8087"
+        environment:
+            - TZ=Asia/Hong_Kong
+            - JAR_NAME=bbu.jar
+            - JAVA_OPTIONS=-Dfile.encoding=UTF-8
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - "./bbu/app:/app"
+        stdin_open: true
+        tty: true
+    bbu-app2:
+        image: ricky/java
+        container_name: bbu2
+        restart: always
+        ports:
+            - "8081:8087"
+        environment:
+            - TZ=Asia/Hong_Kong
+            - JAR_NAME=bbu2.jar
+            - JAVA_OPTIONS=-Dfile.encoding=UTF-8
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - "./bbu/app:/app"
+        stdin_open: true
+        tty: true
+#    qiankun:
+#        image: ricky/npm
+#        restart: always
+#        container_name: qiankun
+#        volumes:
+#            - "./qiankun:/var/www/html"
+#        tty: true   
+#    npm:
+#        image: ricky/npm
+#        restart: always
+#        container_name: npm
+#        volumes:
+#            - "./www:/var/www/html"
+#        tty: true   
+#    go:
+#        image: ricky/golang
+#        restart: always
+#        container_name: go
+#        ports:
+#            - "99:99"
+#        volumes:
+#            - "./go:/var/www/html"
+#        tty: "true"
+#
+#    php:
+#        image: ricky/php7.3
+#        restart: always
+#        container_name: php
+#        ports:
+#            - "8000:8000"
+#        volumes:
+#            # let the php has access to the www folder
+#            - "./www:/var/www/html"
+#        tty: true
+#    web-db:
+#        image: mariadb:10
+#        restart: always
+#        container_name: web-db
+#        env_file:
+#            - ".env"
+#        environment:
+#            - MYSQL_DATABASE=${MYSQL_DATABASE}
+#            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+#            - MYSQL_USER=${MYSQL_USER}
+#            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+#        ports:
+#            - "3306:3306"
+#        volumes:
+#            #- "/etc/timezone:/etc/timezone:ro"
+#            - "./web/db:/var/lib/mysql"
+#    redis:
+#        image: redis:4
+#        restart: always
+#        container_name: redis
+#        env_file:
+#            - ".env"
+#        ports:
+#            - "6379:6379"
+#        volumes:
+#            - "./redis/data:/data"
+#        command: ["redis-server", "--appendonly", "yes"]

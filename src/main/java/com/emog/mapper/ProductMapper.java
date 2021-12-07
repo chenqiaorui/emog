@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.emog.model.City;
+import com.emog.model.Product;
 
 /**
  * @author ricky
@@ -15,9 +15,9 @@ import com.emog.model.City;
  */
 
 @Mapper
-public interface CityMapper {
+public interface ProductMapper {
 	
-	@Select("SELECT * FROM city WHERE state=#{state}")
-	City findByState(@Param("state") String state);
+	@Select("SELECT * FROM pms_product WHERE name=#{name}")
+	Product findByName(@Param("name") String name);
 
 }
