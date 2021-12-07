@@ -12,4 +12,11 @@ redis:
   database: 0
   port: 6379
   password:
+
+# mybatis-spring-boot-starter 打印sql执行日志
+logging:
+  level:
+    com:
+      emog:
+        mapper: debug
   

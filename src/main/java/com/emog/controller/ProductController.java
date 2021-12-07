@@ -4,11 +4,14 @@ package com.emog.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.emog.dto.ProductParam;
 import com.emog.mapper.ProductMapper;
 import com.emog.model.Product;
 import com.emog.service.ProductService;
@@ -29,6 +32,18 @@ public class ProductController {
 	@ResponseBody
 	public Product findByName(String name) {
 		return this.productService.findByName(name);
+	}
+	
+	@RequestMapping(value = "", method = RequestMethod.DELETE)
+	@ResponseBody
+	public int delByName(@RequestParam("name") String name) {
+		return this.productService.delByName(name);
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	@ResponseBody
+	public boolean UpdateById(@RequestBody ProductParam productParam) {
+		return this.productService.UpdateById(productParam);
 	}
 	
 }
