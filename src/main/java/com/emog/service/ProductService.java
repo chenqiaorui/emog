@@ -33,5 +33,9 @@ public class ProductService {
 		return this.productMapper.listAll(pageNum, pageSize);
 	}
 	
+	public boolean insert(Product product) {
+		return this.productMapper.insert(product);
+	}
+	
 
 }

@@ -6,6 +6,7 @@ package com.emog.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -38,5 +39,8 @@ public interface ProductMapper {
 	
 	@Update("UPDATE pms_product SET name=#{name},price=#{price} WHERE id =#{id}")
 	boolean UpdateById(ProductParam productParam);
-
+	
+	@Insert("INSERT INTO pms_product (`name`, `description`, `pic`, `price`, `stock`, `sales`) VALUES (#{name}, #{description}, #{pic}, #{price}, #{stock}, #{sales})")
+	boolean insert(Product product);
+	
 }
