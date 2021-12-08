@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.emog.dto.ProductParam;
-import com.emog.mapper.ProductMapper;
 import com.emog.model.Product;
 import com.emog.service.ProductService;
 import com.github.pagehelper.Page;
@@ -29,8 +28,7 @@ public class ProductController {
 	// @Autowired相当初始化了productService对象
 	@Autowired
 	private ProductService productService;
-	@Autowired
-	private ProductMapper productMapper;
+	
 	
 	@ApiOperation("通过名称获取商品")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
