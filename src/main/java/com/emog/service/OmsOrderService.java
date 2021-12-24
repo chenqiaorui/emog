@@ -10,4 +10,9 @@ public interface OmsOrderService {
      * 订单查询
      */
     List<OmsOrder> list(OmsOrderQueryParam queryParam, Integer pageSize, Integer pageNum);
+    
+    /**
+     * 批量删除订单
+     */
+    int delete(List<Long> ids);
 }

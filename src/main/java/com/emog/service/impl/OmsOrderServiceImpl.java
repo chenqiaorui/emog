@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.emog.dao.OmsOrderDao;
 import com.emog.dto.OmsOrderQueryParam;
+import com.emog.mapper.OmsOrderMapper;
 import com.emog.model.OmsOrder;
+import com.emog.model.OmsOrderExample;
 import com.emog.service.OmsOrderService;
 import com.github.pagehelper.PageHelper;
 
@@ -15,12 +17,23 @@ import com.github.pagehelper.PageHelper;
 public class OmsOrderServiceImpl implements OmsOrderService {
 	
 	@Autowired
+    private OmsOrderMapper orderMapper;
+	@Autowired
 	private OmsOrderDao orderDao;
 
 	@Override
 	public List<OmsOrder> list(OmsOrderQueryParam queryParam, Integer pageSize, Integer pageNum) {
 		PageHelper.startPage(pageNum, pageSize);
 		return orderDao.getList(queryParam);
+	}
+
+	@Override
+	public int delete(List<Long> ids) {
+		OmsOrder record = new OmsOrder();
+        record.setDeleteStatus(1);
+        OmsOrderExample example = new OmsOrderExample();
+        example.createCriteria().andDeleteStatusEqualTo(0).andIdIn(ids);
+        return orderMapper.updateByExampleSelective(record, example);
 	}
 
 }

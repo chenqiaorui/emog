@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/order")
 @Api(tags = "OmsOrderController", description = "订单管理")
 //@Api(tags = "订单列表")
-public class OmsOrderController {
+public class OmsCartItemController {
 	
 	@Autowired
     private OmsOrderService orderService;
