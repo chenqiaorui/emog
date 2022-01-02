@@ -16,4 +16,5 @@ public interface OmsOrderService {
 
     /*修改订单备注*/
     int updateNote(Long id, String note);
+
 }

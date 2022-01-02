@@ -4,7 +4,6 @@ package com.emog.controller;
 
 import java.util.List;
 
-import com.emog.common.CommonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/order")
 @Api(tags = "OmsOrderController", description = "订单管理")
 //@Api(tags = "订单列表")
-public class OmsOrderController {
+public class OmsCartItemController {
 	
 	@Autowired
     private OmsOrderService orderService;
@@ -44,15 +43,15 @@ public class OmsOrderController {
         List<OmsOrder> orderList = orderService.list(queryParam, pageSize, pageNum);
         return orderList;
     }
-
-    @ApiOperation("删除订单")
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+    
+    // 设置软删除
+    @ApiOperation("批量删除订单")
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult deleteById(@RequestParam("ids")List ids) {
-        int count = orderService.delete(ids);
-        if(count > 0 ) {
-
-        }
-        return CommonResult.success(count);
+    public int delete(@RequestParam("ids") List<Long> ids) {
+        return orderService.delete(ids);
     }
+    
+    
+  
 }

@@ -10,13 +10,17 @@ import org.springframework.stereotype.Service;
 
 import com.emog.dao.OmsOrderDao;
 import com.emog.dto.OmsOrderQueryParam;
+import com.emog.mapper.OmsOrderMapper;
 import com.emog.model.OmsOrder;
+import com.emog.model.OmsOrderExample;
 import com.emog.service.OmsOrderService;
 import com.github.pagehelper.PageHelper;
 
 @Service
 public class OmsOrderServiceImpl implements OmsOrderService {
 	
+	@Autowired
+    private OmsOrderMapper orderMapper;
 	@Autowired
 	private OmsOrderDao orderDao;
 
