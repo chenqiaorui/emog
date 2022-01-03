@@ -24,9 +24,6 @@ public class OmsOrderServiceImpl implements OmsOrderService {
 	@Autowired
 	private OmsOrderDao orderDao;
 
-	@Autowired
-	private OmsOrderMapper orderMapper;
-
 	@Override
 	public List<OmsOrder> list(OmsOrderQueryParam queryParam, Integer pageSize, Integer pageNum) {
 		PageHelper.startPage(pageNum, pageSize);
