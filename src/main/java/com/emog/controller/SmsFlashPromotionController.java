@@ -30,7 +30,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Controller
 @RequestMapping("/flash")
-@Api(tags = "OmsOrderController", description = "订单管理")
+@Api(tags = "SmsFlashPromotionController", description = "限时购管理")
 //@Api(tags = "订单列表")
 public class SmsFlashPromotionController {
 	
