@@ -25,6 +25,25 @@ public class SmsHomeBrandServiceImpl implements SmsHomeBrandService {
 		return homeBrandMapper.selectByExample(example);
 	}
 
+	@Override
+	public int delete(List<Long> ids) {
+		// TODO Auto-generated method stub
+		SmsHomeBrandExample example = new SmsHomeBrandExample();
+		example.createCriteria().andIdIn(ids);
+		int count = homeBrandMapper.deleteByExample(example);
+		return count;
+	}
+
+	@Override
+	public int create(List<SmsHomeBrand> homeBrandList) {
+        for (SmsHomeBrand smsHomeBrand : homeBrandList) {
+            smsHomeBrand.setRecommendStatus(1);
+            smsHomeBrand.setSort(0);
+            homeBrandMapper.insert(smsHomeBrand);
+        }
+        return homeBrandList.size();
+    }
+
 	
 
 }
