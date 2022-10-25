@@ -1,35 +1,42 @@
 version: '3.5'
 services:
-    bbu-app:
-        image: ricky/java
-        container_name: bbu
-        restart: always
-        ports:
-            - "8080:8087"
-        environment:
-            - TZ=Asia/Hong_Kong
-            - JAR_NAME=bbu.jar
-            - JAVA_OPTIONS=-Dfile.encoding=UTF-8
-        volumes:
-            - /etc/localtime:/etc/localtime:ro
-            - "./bbu/app:/app"
-        stdin_open: true
-        tty: true
-    bbu-app2:
-        image: ricky/java
-        container_name: bbu2
-        restart: always
-        ports:
-            - "8081:8087"
-        environment:
-            - TZ=Asia/Hong_Kong
-            - JAR_NAME=bbu2.jar
-            - JAVA_OPTIONS=-Dfile.encoding=UTF-8
-        volumes:
-            - /etc/localtime:/etc/localtime:ro
-            - "./bbu/app:/app"
-        stdin_open: true
-        tty: true
+   go:
+      image: ricky/nginx
+      restart: always
+      container_name: nginx
+      ports:
+          - "801:80"
+      tty: "true"
+   # bbu-app:
+   #     image: ricky/java
+   #     container_name: bbu
+   #     restart: always
+   #     ports:
+   #         - "8080:8087"
+   #     environment:
+   #         - TZ=Asia/Hong_Kong
+   #         - JAR_NAME=bbu.jar
+   #         - JAVA_OPTIONS=-Dfile.encoding=UTF-8
+   #     volumes:
+   #         - /etc/localtime:/etc/localtime:ro
+   #         - "./bbu/app:/app"
+   #     stdin_open: true
+   #     tty: true
+   # bbu-app2:
+   #     image: ricky/java
+   #     container_name: bbu2
+   #     restart: always
+   #     ports:
+   #         - "8081:8087"
+   #     environment:
+   #         - TZ=Asia/Hong_Kong
+   #         - JAR_NAME=bbu2.jar
+   #         - JAVA_OPTIONS=-Dfile.encoding=UTF-8
+   #     volumes:
+   #         - /etc/localtime:/etc/localtime:ro
+   #         - "./bbu/app:/app"
+   #     stdin_open: true
+   #     tty: true
 #    qiankun:
 #        image: ricky/npm
 #        restart: always
