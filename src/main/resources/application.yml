@@ -28,9 +28,9 @@ pagehelper:
 
 
 #mybatis:
-  #mapper-locations:
-    #- classpath:dao/*.xml
-    #- classpath*:com/**/mapper/*.xml
+#  mapper-locations:
+##    - classpath:dao/*.xml
+#    - classpath*:com/**/mapper/*.xml
 
 # 访问swagger:   http://localhost:8081/swagger-ui.html
   
