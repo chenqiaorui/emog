@@ -1,6 +1,9 @@
 package com.emog.service;
 
 import com.emog.dto.PmsProductParam;
+import com.emog.model.PmsProduct;
+
+import java.util.List;
 
 public interface PmsProductService {
     /**
@@ -12,4 +15,9 @@ public interface PmsProductService {
      * 更新商品
      */
     int update(Long id, PmsProductParam productParam);
+
+    /**
+     * 分页查询商品
+     */
+    List<PmsProduct> list(Integer pageSize, Integer pageNum);
 }

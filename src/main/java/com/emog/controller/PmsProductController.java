@@ -4,6 +4,7 @@ package com.emog.controller;
 
 import com.emog.common.CommonResult;
 import com.emog.dto.PmsProductParam;
+import com.emog.model.PmsProduct;
 import com.emog.service.PmsProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,8 @@ import com.github.pagehelper.PageHelper;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+
+import java.util.List;
 
 
 @Controller
@@ -49,6 +52,14 @@ public class PmsProductController {
 		} else {
 			return CommonResult.failed();
 		}
+	}
+
+	@RequestMapping(value = "list", method = RequestMethod.GET)
+	@ResponseBody
+	public CommonResult<List<PmsProduct>> getList(@RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
+								@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
+		List<PmsProduct> productList = productService.list(pageSize, pageNum);
+		return CommonResult.success(productList);
 	}
 	
 
