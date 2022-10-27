@@ -7,11 +7,7 @@ import com.emog.dto.PmsProductParam;
 import com.emog.service.PmsProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.emog.dto.ProductParam;
 import com.emog.model.Product;
@@ -37,6 +33,17 @@ public class PmsProductController {
 	public CommonResult create(@RequestBody PmsProductParam productParam) {
 		System.out.println(productParam.toString());
 		int count = productService.create(productParam);
+		if (count > 0) {
+			return CommonResult.success(count);
+		} else {
+			return CommonResult.failed();
+		}
+	}
+
+	@RequestMapping(value = "update/{id}", method = RequestMethod.POST)
+	@ResponseBody
+	public CommonResult update(@PathVariable Long id, @RequestBody PmsProductParam productParam) {
+		int count = productService.update(id, productParam);
 		if (count > 0) {
 			return CommonResult.success(count);
 		} else {

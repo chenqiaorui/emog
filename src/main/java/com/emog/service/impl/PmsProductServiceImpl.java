@@ -21,4 +21,13 @@ public class PmsProductServiceImpl implements PmsProductService {
         int count = productMapper.insertSelective(product);
         return count;
     }
+
+    @Override
+    public int update(Long id, PmsProductParam productParam) {
+        PmsProduct product = productParam;
+        product.setId(id);
+//        System.out.println(productParam);
+        productMapper.updateByPrimaryKeySelective(product);
+        return 1;
+    }
 }
