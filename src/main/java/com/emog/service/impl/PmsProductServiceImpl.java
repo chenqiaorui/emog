@@ -44,4 +44,13 @@ public class PmsProductServiceImpl implements PmsProductService {
         return productMapper.selectByExample(productExample);
     }
 
+    @Override
+    public int updateDeleteStatus(List<Long> ids, Integer deleteStatus) {
+        PmsProduct record = new PmsProduct();
+        record.setDeleteStatus(deleteStatus);
+        PmsProductExample example = new PmsProductExample();
+        example.createCriteria().andIdIn(ids);
+        return productMapper.updateByExampleSelective(record, example);
+    }
+
 }

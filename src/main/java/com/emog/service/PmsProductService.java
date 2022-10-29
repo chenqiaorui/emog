@@ -20,4 +20,6 @@ public interface PmsProductService {
      * 分页查询商品
      */
     List<PmsProduct> list(Integer pageSize, Integer pageNum);
+
+    int updateDeleteStatus(List<Long> ids, Integer deleteStatus);
 }
