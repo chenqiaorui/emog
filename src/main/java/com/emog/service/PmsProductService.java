@@ -21,5 +21,13 @@ public interface PmsProductService {
      */
     List<PmsProduct> list(Integer pageSize, Integer pageNum);
 
+    /**
+     * 批量更新删除状态
+     */
     int updateDeleteStatus(List<Long> ids, Integer deleteStatus);
+
+    /**
+     * 根据商品名称模糊查询
+     */
+    List<PmsProduct> list(String keyword);
 }

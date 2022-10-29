@@ -1,5 +1,6 @@
 package com.emog.service.impl;
 
+import cn.hutool.core.util.StrUtil;
 import com.emog.dto.PmsProductParam;
 import com.emog.mapper.PmsProductMapper;
 import com.emog.model.PmsProduct;
@@ -51,6 +52,18 @@ public class PmsProductServiceImpl implements PmsProductService {
         PmsProductExample example = new PmsProductExample();
         example.createCriteria().andIdIn(ids);
         return productMapper.updateByExampleSelective(record, example);
+    }
+
+    @Override
+    public List<PmsProduct> list(String keyword) {
+        PmsProductExample productExample = new PmsProductExample();
+        PmsProductExample.Criteria criteria = productExample.createCriteria();
+        criteria.andDeleteStatusEqualTo(0);
+        if(!StrUtil.isEmpty(keyword)){
+            criteria.andNameLike("%" + keyword + "%");
+            productExample.or().andDeleteStatusEqualTo(0);
+        }
+        return productMapper.selectByExample(productExample);
     }
 
 }

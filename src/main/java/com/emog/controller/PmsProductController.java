@@ -59,6 +59,15 @@ public class PmsProductController {
 		return CommonResult.success(count);
 	}
 
+	@ApiOperation("根据商品名称模糊查询")
+	@RequestMapping(value = "simpleList", method = RequestMethod.GET)
+	@ResponseBody
+	public CommonResult<List<PmsProduct>> getList(String keyword) {
+		List<PmsProduct> productList = productService.list(keyword);
+		return CommonResult.success(productList);
+	}
+
+	@ApiOperation("查询商品")
 	@RequestMapping(value = "list", method = RequestMethod.GET)
 	@ResponseBody
 	public CommonResult<List<PmsProduct>> getList(@RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
