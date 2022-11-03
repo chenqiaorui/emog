@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 03/11/2022 18:57:39
+ Date: 03/11/2022 19:12:07
 */
 
 SET NAMES utf8mb4;
@@ -58,6 +58,20 @@ CREATE TABLE `ums_permission`  (
   `sort` int(0) NULL DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台用户权限表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for ums_resource
+-- ----------------------------
+DROP TABLE IF EXISTS `ums_resource`;
+CREATE TABLE `ums_resource`  (
+  `id` bigint(0) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '资源名称',
+  `url` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '资源URL',
+  `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
+  `category_id` bigint(0) NULL DEFAULT NULL COMMENT '资源分类ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '后台资源表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for ums_role
