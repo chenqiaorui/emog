@@ -13,4 +13,10 @@ public interface UmsAdminService {
      */
     UmsAdmin register(UmsAdminParam adminParam);
 
+    /**
+     * 登录
+     * */
+
+    String login(String username, String password);
+
 }
