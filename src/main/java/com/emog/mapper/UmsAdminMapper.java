@@ -3,8 +3,11 @@ package com.emog.mapper;
 import com.emog.model.UmsAdmin;
 import com.emog.model.UmsAdminExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface UmsAdminMapper {
     int countByExample(UmsAdminExample example);
 

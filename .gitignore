@@ -33,6 +33,5 @@ build/
 .vscode/
 
 ### config
-./src/main/resources/application.yml
-!**/src/main/resources/generator.properties
-!**/src/main/resources/generatorConfig.xml
+src/main/resources/
+
