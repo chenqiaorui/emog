@@ -1,0 +1,42 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    #url: jdbc:mysql://localhost:3306/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://192.168.1.167:33069/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+    #password: testing123
+
+server:
+  port: 8081
+
+redis:
+  host: localhost
+  database: 0
+  port: 6379
+  password:
+
+# mybatis-spring-boot-starter 打印sql执行日志
+logging:
+  level:
+    com:
+      emog:
+        mapper: debug
+
+# 分页配置，分页类型为mysql
+pagehelper:
+  helper-dialect: mysql
+  # 分页合理话参数，pageNum<=0时查询第一页，pageNum>pages（页面总数），查询最后一页
+  reasonable: true
+
+
+#mybatis:
+#  mapper-locations:
+##    - classpath:dao/*.xml
+#    - classpath*:com/**/mapper/*.xml
+
+# 访问swagger:   http://localhost:8081/swagger-ui/index.html
+#  or http://localhost:8081/swagger-ui.html
+  
