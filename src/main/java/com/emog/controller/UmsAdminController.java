@@ -36,6 +36,6 @@ public class UmsAdminController {
     @ResponseBody
     public CommonResult login(@RequestBody UmsAdminLoginParam umsAdminLoginParam) {
         String token = adminService.login(umsAdminLoginParam.getUsername(), umsAdminLoginParam.getPassword());
-        return null;
+        return CommonResult.success(token);
     }
 }

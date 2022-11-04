@@ -1,10 +1,12 @@
 package com.emog.service.impl;
 
+import com.emog.bo.AdminUserDetails;
 import com.emog.dto.UmsAdminParam;
 import com.emog.mapper.UmsAdminMapper;
 import com.emog.model.UmsAdmin;
 import com.emog.model.UmsAdminExample;
 import com.emog.service.UmsAdminService;
+import com.emog.util.JwtTokenUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,12 +23,16 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+
 
     @Override
     public UmsAdmin register(UmsAdminParam adminParam) {
         UmsAdmin umsAdmin = new UmsAdmin();
         BeanUtils.copyProperties(adminParam, umsAdmin);
         umsAdmin.setCreateTime(new Date());
+        umsAdmin.setStatus(1);
         //1.查询是否有相同用户名的用户
         UmsAdminExample example = new UmsAdminExample();
         example.createCriteria().andUsernameEqualTo(umsAdmin.getUsername());
@@ -43,44 +49,30 @@ public class UmsAdminServiceImpl implements UmsAdminService {
 
     @Override
     public String login(String username, String password) {
-//        UserDetails userDetails = loadUserByUsername(username);
+        String token = null;
+        UserDetails userDetails = loadUserByUsername(username);
+        if(!passwordEncoder.matches(password,userDetails.getPassword())){
+            System.out.println("密码不正确");
+        }
+        if(!userDetails.isEnabled()){
+            System.out.println("帐号已被禁用");
+        }
+        token = jwtTokenUtil.generateToken(userDetails);
+        return token;
+    }
+
+    public UserDetails loadUserByUsername(String username) {
+        UmsAdmin admin = null;
+        UmsAdminExample example = new UmsAdminExample();
+        example.createCriteria().andUsernameEqualTo(username);
+        List<UmsAdmin> adminList = adminMapper.selectByExample(example);
+        if (adminList != null && adminList.size() > 0) {
+            admin = adminList.get(0);
+            return new AdminUserDetails(admin);
+        }
         return null;
     }
 
-//    public UserDetails loadUserByUsername(String username){
-//        //获取用户信息
-//        UmsAdmin admin = getAdminByUsername(username);
-//        if (admin != null) {
-//            List<UmsResource> resourceList = getResourceList(admin.getId());
-//            return new AdminUserDetails(admin,resourceList);
-//        }
-//        throw new UsernameNotFoundException("用户名或密码错误");
-//    }
-//
-//    public UmsAdmin getAdminByUsername(String username) {
-////        UmsAdmin admin = getCacheService().getAdmin(username);
-////        if(admin!=null) return  admin;
-//        UmsAdminExample example = new UmsAdminExample();
-//        example.createCriteria().andUsernameEqualTo(username);
-//        List<UmsAdmin> adminList = adminMapper.selectByExample(example);
-//        if (adminList != null && adminList.size() > 0) {
-//            admin = adminList.get(0);
-//            getCacheService().setAdmin(admin);
-//            return admin;
-//        }
-//        return null;
-//    }
-//
-//    public List<UmsResource> getResourceList(Long adminId) {
-//        List<UmsResource> resourceList = getCacheService().getResourceList(adminId);
-//        if(CollUtil.isNotEmpty(resourceList)){
-//            return  resourceList;
-//        }
-//        resourceList = adminRoleRelationDao.getResourceList(adminId);
-//        if(CollUtil.isNotEmpty(resourceList)){
-//            getCacheService().setResourceList(adminId,resourceList);
-//        }
-//        return resourceList;
-//    }
+
 
 }
