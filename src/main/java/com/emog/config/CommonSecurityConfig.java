@@ -1,5 +1,6 @@
 package com.emog.config;
 
+import com.emog.component.JwtAuthenticationTokenFilter;
 import com.emog.util.JwtTokenUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,4 +18,11 @@ public class CommonSecurityConfig {
     public JwtTokenUtil jwtTokenUtil() {
         return new JwtTokenUtil();
     }
+
+    @Bean
+    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter(){
+        return new JwtAuthenticationTokenFilter();
+    }
+
+
 }

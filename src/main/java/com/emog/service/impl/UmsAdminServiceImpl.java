@@ -61,6 +61,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         return token;
     }
 
+    @Override
     public UserDetails loadUserByUsername(String username) {
         UmsAdmin admin = null;
         UmsAdminExample example = new UmsAdminExample();
@@ -69,6 +70,20 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         if (adminList != null && adminList.size() > 0) {
             admin = adminList.get(0);
             return new AdminUserDetails(admin);
+        }
+        return null;
+    }
+
+    @Override
+    public UmsAdmin getAdminByUsername(String username) {
+        UmsAdmin admin = null;
+
+        UmsAdminExample example = new UmsAdminExample();
+        example.createCriteria().andUsernameEqualTo(username);
+        List<UmsAdmin> adminList = adminMapper.selectByExample(example);
+        if (adminList != null && adminList.size() > 0) {
+            admin = adminList.get(0);
+            return admin;
         }
         return null;
     }

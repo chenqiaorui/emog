@@ -4,6 +4,7 @@ import com.emog.dto.PmsProductParam;
 import com.emog.dto.UmsAdminParam;
 import com.emog.model.PmsProduct;
 import com.emog.model.UmsAdmin;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
 
@@ -18,5 +19,15 @@ public interface UmsAdminService {
      * */
 
     String login(String username, String password);
+
+    /**
+     * 根据用户名获取后台管理员
+     */
+    UmsAdmin getAdminByUsername(String username);
+
+    /**
+     * 获取用户信息
+     */
+    UserDetails loadUserByUsername(String username);
 
 }
