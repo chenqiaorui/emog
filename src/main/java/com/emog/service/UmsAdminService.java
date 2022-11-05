@@ -30,4 +30,9 @@ public interface UmsAdminService {
      */
     UserDetails loadUserByUsername(String username);
 
+    /**
+     * 获取缓存服务
+     */
+    UmsAdminCacheService getCacheService();
+
 }
