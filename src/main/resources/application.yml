@@ -72,5 +72,13 @@ jwt:
   expiration: 604800 #JWT的超期限时间(60*60*24*7)
   tokenHead: 'Bearer '  #JWT负载中拿到开头
 
+rabbitmq:
+  host: localhost # rabbitmq的连接地址
+  port: 5672 # rabbitmq的连接端口号
+  virtual-host: /emog # rabbitmq的虚拟host
+  username: emog # rabbitmq的用户名
+  password: emog # rabbitmq的密码
+  publisher-confirms: true #如果对异步消息需要回调必须设置为true
+
 
   
