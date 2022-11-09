@@ -8,14 +8,14 @@ public class OmsCartItem implements Serializable {
     private Long id;
 
     /**
-     * 商品的id
+     * 商品id
      *
      * @mbggenerated
      */
     private Long productId;
 
     /**
-     * 商品sku的id
+     * 商品sku的ID
      *
      * @mbggenerated
      */
@@ -26,7 +26,7 @@ public class OmsCartItem implements Serializable {
      *
      * @mbggenerated
      */
-    private Long memberId;
+    private Integer memberId;
 
     /**
      * 购买数量
@@ -43,27 +43,6 @@ public class OmsCartItem implements Serializable {
     private BigDecimal price;
 
     /**
-     * 销售属性1
-     *
-     * @mbggenerated
-     */
-    private String sp1;
-
-    /**
-     * 销售属性2
-     *
-     * @mbggenerated
-     */
-    private String sp2;
-
-    /**
-     * 销售属性3
-     *
-     * @mbggenerated
-     */
-    private String sp3;
-
-    /**
      * 商品主图
      *
      * @mbggenerated
@@ -78,20 +57,6 @@ public class OmsCartItem implements Serializable {
     private String productName;
 
     /**
-     * 商品品牌
-     *
-     * @mbggenerated
-     */
-    private String productBrand;
-
-    /**
-     * 商品的条码
-     *
-     * @mbggenerated
-     */
-    private String productSn;
-
-    /**
      * 商品副标题（卖点）
      *
      * @mbggenerated
@@ -99,7 +64,7 @@ public class OmsCartItem implements Serializable {
     private String productSubTitle;
 
     /**
-     * 商品sku条码
+     * 商品sku码
      *
      * @mbggenerated
      */
@@ -117,14 +82,14 @@ public class OmsCartItem implements Serializable {
      *
      * @mbggenerated
      */
-    private Date createDate;
+    private Date createTime;
 
     /**
      * 修改时间
      *
      * @mbggenerated
      */
-    private Date modifyDate;
+    private Date modifyTime;
 
     /**
      * 是否删除
@@ -134,14 +99,18 @@ public class OmsCartItem implements Serializable {
     private Integer deleteStatus;
 
     /**
-     * 商品的分类
+     * 商品分类
      *
      * @mbggenerated
      */
     private Long productCategoryId;
 
+    private String productBrand;
+
+    private String prosuctSn;
+
     /**
-     * 商品销售属性:[{"key":"颜色","value":"银色"},{"key":"容量","value":"4G"}]
+     * 商品销售属性:[{"key":"颜色","value":"颜色"},{"key":"容量","value":"4G"}]
      *
      * @mbggenerated
      */
@@ -173,11 +142,11 @@ public class OmsCartItem implements Serializable {
         this.productSkuId = productSkuId;
     }
 
-    public Long getMemberId() {
+    public Integer getMemberId() {
         return memberId;
     }
 
-    public void setMemberId(Long memberId) {
+    public void setMemberId(Integer memberId) {
         this.memberId = memberId;
     }
 
@@ -197,30 +166,6 @@ public class OmsCartItem implements Serializable {
         this.price = price;
     }
 
-    public String getSp1() {
-        return sp1;
-    }
-
-    public void setSp1(String sp1) {
-        this.sp1 = sp1;
-    }
-
-    public String getSp2() {
-        return sp2;
-    }
-
-    public void setSp2(String sp2) {
-        this.sp2 = sp2;
-    }
-
-    public String getSp3() {
-        return sp3;
-    }
-
-    public void setSp3(String sp3) {
-        this.sp3 = sp3;
-    }
-
     public String getProductPic() {
         return productPic;
     }
@@ -235,22 +180,6 @@ public class OmsCartItem implements Serializable {
 
     public void setProductName(String productName) {
         this.productName = productName;
-    }
-
-    public String getProductBrand() {
-        return productBrand;
-    }
-
-    public void setProductBrand(String productBrand) {
-        this.productBrand = productBrand;
-    }
-
-    public String getProductSn() {
-        return productSn;
-    }
-
-    public void setProductSn(String productSn) {
-        this.productSn = productSn;
     }
 
     public String getProductSubTitle() {
@@ -277,20 +206,20 @@ public class OmsCartItem implements Serializable {
         this.memberNickname = memberNickname;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getModifyDate() {
-        return modifyDate;
+    public Date getModifyTime() {
+        return modifyTime;
     }
 
-    public void setModifyDate(Date modifyDate) {
-        this.modifyDate = modifyDate;
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
     }
 
     public Integer getDeleteStatus() {
@@ -307,6 +236,22 @@ public class OmsCartItem implements Serializable {
 
     public void setProductCategoryId(Long productCategoryId) {
         this.productCategoryId = productCategoryId;
+    }
+
+    public String getProductBrand() {
+        return productBrand;
+    }
+
+    public void setProductBrand(String productBrand) {
+        this.productBrand = productBrand;
+    }
+
+    public String getProsuctSn() {
+        return prosuctSn;
+    }
+
+    public void setProsuctSn(String prosuctSn) {
+        this.prosuctSn = prosuctSn;
     }
 
     public String getProductAttr() {
@@ -329,20 +274,17 @@ public class OmsCartItem implements Serializable {
         sb.append(", memberId=").append(memberId);
         sb.append(", quantity=").append(quantity);
         sb.append(", price=").append(price);
-        sb.append(", sp1=").append(sp1);
-        sb.append(", sp2=").append(sp2);
-        sb.append(", sp3=").append(sp3);
         sb.append(", productPic=").append(productPic);
         sb.append(", productName=").append(productName);
-        sb.append(", productBrand=").append(productBrand);
-        sb.append(", productSn=").append(productSn);
         sb.append(", productSubTitle=").append(productSubTitle);
         sb.append(", productSkuCode=").append(productSkuCode);
         sb.append(", memberNickname=").append(memberNickname);
-        sb.append(", createDate=").append(createDate);
-        sb.append(", modifyDate=").append(modifyDate);
+        sb.append(", createTime=").append(createTime);
+        sb.append(", modifyTime=").append(modifyTime);
         sb.append(", deleteStatus=").append(deleteStatus);
         sb.append(", productCategoryId=").append(productCategoryId);
+        sb.append(", productBrand=").append(productBrand);
+        sb.append(", prosuctSn=").append(prosuctSn);
         sb.append(", productAttr=").append(productAttr);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

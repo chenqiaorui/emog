@@ -5,6 +5,7 @@ package com.emog.controller;
 import java.util.List;
 
 import com.emog.common.CommonResult;
+import com.emog.dto.OmsOrderDeliveryParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -54,5 +55,16 @@ public class OmsOrderController {
 
         }
         return CommonResult.success(count);
+    }
+
+    @ApiOperation("批量发货")
+    @RequestMapping(value = "/update/delivery", method = RequestMethod.POST)
+    @ResponseBody
+    public CommonResult delivery(@RequestBody List<OmsOrderDeliveryParam> deliveryParamList) {
+        int count = orderService.delivery(deliveryParamList);
+        if (count > 0) {
+            return CommonResult.success(count);
+        }
+        return CommonResult.failed();
     }
 }
