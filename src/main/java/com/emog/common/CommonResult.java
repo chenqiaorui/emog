@@ -11,6 +11,13 @@ public class CommonResult<T> {
         this.data = data;
     }
 
+    /**
+     * 未登录返回结果
+     */
+    public static <T> CommonResult<T> unauthorized(T data) {
+        return new CommonResult<T>(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
+    }
+
     public static <T> CommonResult<T> success(T data) {
         return new CommonResult<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
     }

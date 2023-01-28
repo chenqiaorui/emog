@@ -3,12 +3,12 @@ spring:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
   datasource:
-    #url: jdbc:mysql://localhost:3306/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
-    url: jdbc:mysql://192.168.1.167:33069/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://localhost:3306/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    #url: jdbc:mysql://192.168.1.167:33069/emog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
-    #password: root
+    password: root
     #password: testing123
-    password: PXDN93VRKUm8TeE7 # cookie
+    #password: PXDN93VRKUm8TeE7 # cookie
 server:
   port: 8081
   servlet:
@@ -19,6 +19,10 @@ redis:
   database: 0
   port: 6379
   password:
+  key:
+    admin: 'ums:admin'
+  expire:
+    common: 86400 # 24小时
 
 # mybatis-spring-boot-starter 打印sql执行日志
 logging:
@@ -67,4 +71,14 @@ jwt:
   secret: emog-admin-secret #JWT加解密使用的密钥
   expiration: 604800 #JWT的超期限时间(60*60*24*7)
   tokenHead: 'Bearer '  #JWT负载中拿到开头
+
+rabbitmq:
+  host: localhost # rabbitmq的连接地址
+  port: 5672 # rabbitmq的连接端口号
+  virtual-host: /emog # rabbitmq的虚拟host
+  username: emog # rabbitmq的用户名
+  password: emog # rabbitmq的密码
+  publisher-confirms: true #如果对异步消息需要回调必须设置为true
+
+
   

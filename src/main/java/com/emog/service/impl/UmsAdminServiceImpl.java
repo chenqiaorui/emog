@@ -1,10 +1,12 @@
 package com.emog.service.impl;
 
+import cn.hutool.extra.spring.SpringUtil;
 import com.emog.bo.AdminUserDetails;
 import com.emog.dto.UmsAdminParam;
 import com.emog.mapper.UmsAdminMapper;
 import com.emog.model.UmsAdmin;
 import com.emog.model.UmsAdminExample;
+import com.emog.service.UmsAdminCacheService;
 import com.emog.service.UmsAdminService;
 import com.emog.util.JwtTokenUtil;
 import org.springframework.beans.BeanUtils;
@@ -76,18 +78,27 @@ public class UmsAdminServiceImpl implements UmsAdminService {
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
-        UmsAdmin admin = null;
+//        UmsAdmin admin = null;
+        UmsAdmin admin = getCacheService().getAdmin(username);
+        if(admin!=null) {
+            return  admin;
+        }
 
         UmsAdminExample example = new UmsAdminExample();
         example.createCriteria().andUsernameEqualTo(username);
         List<UmsAdmin> adminList = adminMapper.selectByExample(example);
         if (adminList != null && adminList.size() > 0) {
             admin = adminList.get(0);
+            getCacheService().setAdmin(admin);
             return admin;
         }
         return null;
     }
 
+    @Override
+    public UmsAdminCacheService getCacheService() {
+        return SpringUtil.getBean(UmsAdminCacheService.class);
+    }
 
 
 }
