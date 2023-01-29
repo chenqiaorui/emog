@@ -7,6 +7,7 @@ import com.emog.dto.PmsProductParam;
 import com.emog.model.PmsProduct;
 import com.emog.service.PmsProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,6 @@ public class PmsProductController {
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	@ResponseBody
 	public CommonResult create(@RequestBody PmsProductParam productParam) {
-		System.out.println(productParam.toString());
 		int count = productService.create(productParam);
 		if (count > 0) {
 			return CommonResult.success(count);
@@ -70,12 +70,10 @@ public class PmsProductController {
 	@ApiOperation("查询商品")
 	@RequestMapping(value = "list", method = RequestMethod.GET)
 	@ResponseBody
+	@PreAuthorize("hasAuthority('pms:product:list')")
 	public CommonResult<List<PmsProduct>> getList(@RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
 												  @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
 		List<PmsProduct> productList = productService.list(pageSize, pageNum);
 		return CommonResult.success(productList);
 	}
-	
-
-	
 }

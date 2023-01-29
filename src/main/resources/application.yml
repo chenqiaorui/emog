@@ -65,7 +65,7 @@ secure:
 #      - /admin/info
 #      - /admin/logout
 #      - /minio/upload
-#      - /**
+      - /**
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
   secret: emog-admin-secret #JWT加解密使用的密钥
