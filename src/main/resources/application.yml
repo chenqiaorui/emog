@@ -44,7 +44,7 @@ pagehelper:
 #    - classpath*:com/**/mapper/*.xml
 
 # 访问swagger:   http://localhost:8081/swagger-ui/index.html
-#  or http://localhost:8081/swagger-ui.html
+#  or http://localhost:8081/swagger-ui.html or http://localhost:8081/api/swagger-ui.html
 
 secure:
   ignored:

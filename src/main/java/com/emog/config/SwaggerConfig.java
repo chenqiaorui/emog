@@ -21,7 +21,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("action-swagger").description("swagger实战").termsOfServiceUrl("")
+        return new ApiInfoBuilder().title("EMOG").description("Emog-Swagger").termsOfServiceUrl("")
                 .version("1.0").build();
     }
 }
