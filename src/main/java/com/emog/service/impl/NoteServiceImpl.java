@@ -35,27 +35,19 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public int updateDeleteStatus(List<Long> ids, Integer deleteStatus) {
-        return 0;
+    public List<Note> list(Integer pageSize, Integer pageNum) {
+        return null;
     }
 
+
     @Override
-    public List<Note> list(Integer pageSize, Integer pageNum) {
-        PageHelper.startPage(pageNum, pageSize);
-        NoteExample noteExample = new NoteExample();
-        NoteExample.Criteria criteria = noteExample.createCriteria();
-//        criteria.andDeleteStatusEqualTo(0);
-        return noteMapper.selectByExample(noteExample);
+    public int updateDeleteStatus(List<Integer> ids, Integer deleteStatus) {
+        Note record = new Note();
+        record.setIsDelete(deleteStatus);
+        NoteExample example = new NoteExample();
+        example.createCriteria().andIdIn(ids);
+        return noteMapper.updateByExampleSelective(record, example);
     }
-//
-//    @Override
-//    public int updateDeleteStatus(List<Long> ids, Integer deleteStatus) {
-//        Note record = new Note();
-//        record.setDeleteStatus(deleteStatus);
-//        NoteExample example = new NoteExample();
-//        example.createCriteria().andIdIn(ids);
-//        return noteMapper.updateByExampleSelective(record, example);
-//    }
 //
 //    @Override
 //    public List<Note> list(String keyword) {

@@ -47,14 +47,14 @@ public class NoteController {
 //		}
 //	}
 //
-//	@ApiOperation("修改删除状态")
-//	@RequestMapping(value = "/update/deleteStatus", method = RequestMethod.POST)
-//	@ResponseBody
-//	public CommonResult<Integer> updateDeleteStatus(@RequestParam("ids") List<Long> ids,
-//								@RequestParam("deleteStatus") Integer deleteStatus) {
-//		int count = noteService.updateDeleteStatus(ids, deleteStatus);
-//		return CommonResult.success(count);
-//	}
+	@ApiOperation("修改删除状态")
+	@RequestMapping(value = "/update/deleteStatus", method = RequestMethod.POST)
+	@ResponseBody
+	public CommonResult<Integer> updateDeleteStatus(@RequestParam("ids") List<Integer> ids,
+								@RequestParam("deleteStatus") Integer deleteStatus) {
+		int count = noteService.updateDeleteStatus(ids, deleteStatus);
+		return CommonResult.success(count);
+	}
 
 //	@ApiOperation("根据商品名称模糊查询")
 //	@RequestMapping(value = "simpleList", method = RequestMethod.GET)

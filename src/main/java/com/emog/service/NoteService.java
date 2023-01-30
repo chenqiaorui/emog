@@ -22,7 +22,7 @@ public interface NoteService {
 	/**
 	 * 批量更新删除状态
 	 */
-	int updateDeleteStatus(List<Long> ids, Integer deleteStatus);
+	int updateDeleteStatus(List<Integer> ids, Integer deleteStatus);
 
 	/**
 	 * 根据商品名称模糊查询
