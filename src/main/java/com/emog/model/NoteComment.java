@@ -27,6 +27,13 @@ public class NoteComment implements Serializable {
      */
     private Date createTime;
 
+    /**
+     * 是否删除：0->否；1->是
+     *
+     * @mbggenerated
+     */
+    private Integer isDelete;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getId() {
@@ -61,6 +68,14 @@ public class NoteComment implements Serializable {
         this.createTime = createTime;
     }
 
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -71,6 +86,7 @@ public class NoteComment implements Serializable {
         sb.append(", content=").append(content);
         sb.append(", noteId=").append(noteId);
         sb.append(", createTime=").append(createTime);
+        sb.append(", isDelete=").append(isDelete);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
