@@ -5,6 +5,7 @@ import com.emog.dto.UmsAdminLoginParam;
 import com.emog.dto.UmsAdminParam;
 import com.emog.model.UmsAdmin;
 import com.emog.service.UmsAdminService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,6 +19,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/admin")
+@Api(tags = "UmsAdminController")
 public class UmsAdminController {
 
     @Value("${jwt.tokenHeader}")

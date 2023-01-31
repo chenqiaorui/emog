@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UmsAdminCacheServiceImpl implements UmsAdminCacheService {
-    @Value("${redis.database}")
+    @Value("${spring.redis.database}")
     private String REDIS_DATABASE;
-    @Value("${redis.expire.common}")
+    @Value("${spring.redis.expire.common}")
     private Long REDIS_EXPIRE;
-    @Value("${redis.key.admin}")
+    @Value("${spring.redis.key.admin}")
     private String REDIS_KEY_ADMIN;
 
     @Autowired
