@@ -23,3 +23,7 @@ hexo clean
 hexo g 
 hexo d
 ```
+
+## 目标
+
+一天1到2篇知识分享。

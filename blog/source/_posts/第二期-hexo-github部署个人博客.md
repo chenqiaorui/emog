@@ -26,7 +26,7 @@ npm install hexo-deployer-git --save
 ```
 hexo clean # 删除public目录
 hexo g # 创建静态资源public目录
-hexo d # 部署到远程chenqiaorui.github.io项目
+hexo d # 部署到远程chenqiaorui.github.io项目，部署后要等github部署完成后生效，有时可能有缓存，ctrl+F5强制刷新。
 ```
 说明：
 ### 绑定域名
