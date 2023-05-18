@@ -28,7 +28,6 @@ python3 # 进入交互环境，打印python版本
 编辑hello.py
 ```
 print('hello python')
-
 ```
 python hello.py # 执行
 
@@ -74,5 +73,21 @@ Author: Ricky
 a = int(input('a = '))
 b = int(input('b = '))
 
-print('%d + %d = %d' % (a, b, a + b))
+print('%d + %d = %d' % (a, b, a + b)) # 10 + 3 = 13
+print('%d / %d = %d' % (a, b, a / b)) # 10 / 3 = 3，本来输出浮点数的，但是被%d转化了
+print('%d // %d = %d' % (a, b, a // b)) # 10 // 3 = 3
 ```
+
+## 赋值运算符
+```
+"""
+复合赋值运算符
+"""
+a = 5
+b = 2
+a += b # 等价 a = a + b
+print(a) # 7
+a *= b # 等价 a = a * b
+print(a) # 14
+```
+up https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/02.%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0.md
