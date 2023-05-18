@@ -22,14 +22,14 @@ deploy:
 npm install hexo-deployer-git --save
 ```
 
-### 推送
+### 部署到远程仓库chenqiaorui.github.io
 ```
 hexo clean # 删除public目录
 hexo g # 创建静态资源public目录
 hexo d # 部署到远程chenqiaorui.github.io项目，部署后要等github部署完成后生效，有时可能有缓存，ctrl+F5强制刷新。
 ```
-说明：
-### 绑定域名
+
+### 绑定域名<可选>
 
 第一步：dns服务器设置别名：mydomain.cn  CNAME chenqiaorui.github.io
 
@@ -51,3 +51,5 @@ next主题有很多样式，可以用Pisces、Muse、Mist，在themes/next目录
 ```
 scheme: Pisces # 选用Pisces样式
 ```
+
+（全文完）
