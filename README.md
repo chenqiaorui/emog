@@ -24,4 +24,13 @@ d-----         2023/5/18     10:28                blog
 说明：
 - blog 博客页面
 ```
+## 创建博文和发布
+```
+# 创建博文
+
+# 发布
+hexo clean 
+hexo g 
+hexo d
+```
 ## github-actions
