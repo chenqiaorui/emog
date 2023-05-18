@@ -5,15 +5,15 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-### Create a new post
+### 创建页面
 
 ``` bash
-$ hexo new "My New Post"
+$ hexo new "第一期：使用hexo搭建个人博客页面"
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
-### Run server
+### 运行监听服务
 
 ``` bash
 $ hexo server
@@ -21,18 +21,10 @@ $ hexo server
 
 More info: [Server](https://hexo.io/docs/server.html)
 
-### Generate static files
+### 生成public目录用于部署
 
 ``` bash
 $ hexo generate
 ```
 
 More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
