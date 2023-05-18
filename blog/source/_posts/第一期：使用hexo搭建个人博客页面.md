@@ -21,6 +21,8 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 
 ### 运行监听服务
 
+修改页面不需要重启服务，但如果是修改站点配置_config.yaml就需要重启
+
 ``` bash
 $ hexo server
 ```

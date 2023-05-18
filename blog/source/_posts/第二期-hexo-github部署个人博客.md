@@ -24,7 +24,7 @@ npm install hexo-deployer-git --save
 
 ### 推送
 ```
-hexo clean 
+hexo clean # 删除public目录
 hexo g # 创建静态资源public目录
 hexo d # 部署到远程chenqiaorui.github.io项目
 ```
