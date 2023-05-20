@@ -133,3 +133,17 @@ hell
 
 ##### set
 set -e      # 若指令传回值不为0，立即退出脚本
+
+### linux常用命令
+```
+zip -qr yasuo.zip yasuo # -q变不显示压缩信息，-r 表递归压缩下面层级的目录或文件
+
+cat access.log| awk '{print $4}'|sort | uniq -c| sort -nr # 排序
+
+# 查找1天前以.gz结尾的日志，并批量删除
+find /var/log/nginx/ -name "*.gz" -type f -mtime +1|xargs rm -f
+
+## vim技巧
+:set ff # 查看文本格式
+:set binary # 改为unix格式
+```
