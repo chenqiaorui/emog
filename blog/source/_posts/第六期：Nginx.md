@@ -44,3 +44,9 @@ server {
 进行测试：curl -L localhost:88
 返回：after redirect uri
 ```
+### 匹配以/api/开头的uri
+```
+location ^/api/ {
+  proxy_pass http://loclhost:8090;
+}
+```
