@@ -16,7 +16,7 @@ npm install
 hexo server
 
 # 创建博文
-hexo new "第一期：使用hexo搭建个人博客页面"
+hexo new "第一期：页面"
 
 # 发布
 hexo clean 

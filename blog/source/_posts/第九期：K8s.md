@@ -54,4 +54,12 @@ kubectl cp -c supervisord namespace/pod-name-8bf7c9d8-dj2gg:/var/www/html/storag
 
 # 复制本地文件到pod，范例：
 kubectl cp ./xxbbxg.csv -c php-fpm namespace/pod-name-55967f6dd6-jmrk4:/var/www/html/storage/import/xxbbxg.csv
+
+kubectl exec -ti deployment/cron-release -n=$namespace --container=php-fpm bash # 进入容器
+kubectl rollout restart deployment/$project --namespace=$namespace # 更新deployment
+```
+
+### 组件
+```
+kubelet: 运行在每个node上，负责pod的生命周期
 ```
