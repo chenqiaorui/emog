@@ -5,3 +5,5 @@ tags:
 ---
 
 GPT-DEMO(https://www.gptdemo.net/)
+
+集成chatgpt、bing、Bard的chrome插件(https://chathub.gg/)
