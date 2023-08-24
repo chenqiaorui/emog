@@ -27,3 +27,7 @@ hexo d
 ## 目标
 
 一天1到2篇知识分享。
+
+---有用的工具---
+## 生成logo
+https://logomakerr.ai/
