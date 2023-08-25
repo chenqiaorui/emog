@@ -18,6 +18,7 @@ https://github.com/chenqiaorui/backend
 https://gitee.com/playeduxyz/compose.git
 
 ###docker-compose.yml
+```
 version: "3.5"
 
 x-logging: &default-logging
@@ -116,3 +117,51 @@ services:
     networks:
       - backend
     logging: *default-logging
+```
+###docker-light
+https://gitee.com/rickychen1/docker-light
+
+###Dockerfile
+```
+FROM eclipse-temurin:17
+
+LABEL maintainer="0xtyz <tengyongzhi@meedu.vip>"
+
+#使用东八区时间环境
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+#安装基本组件
+RUN apt update && apt install -y nginx
+
+RUN mkdir /app
+
+#Copy代码
+COPY frontend /app/frontend
+COPY backend /app/backend
+COPY h5 /app/h5
+COPY api /app/api
+COPY conf/nginx.conf /etc/nginx/sites-enabled/default
+
+RUN chmod +x /app/api/start.sh
+
+ENTRYPOINT ["/app/api/start.sh"]
+```
+###操作步骤
+###创建分类
+方便管理员对资源分类，分类管理 -> 新建分类 -> 产品开发
+                          - 后端
+                          - 前端
+                          - 产品设计
+###上传资源，资源归属于分类
+资源管理 -> 视频 -> 视频分类 -> 批量上传，若未选择分类，分配到未分类
+
+###创建部门
+支持多级子部门，如技术部-运维部
+
+###创建学员，学员归属于部门
+支持多部门绑定
+
+###指派课程
+部门下的学员才可以学习
+
+
