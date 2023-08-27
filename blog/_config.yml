@@ -104,5 +104,5 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/chenqiaorui/chenqiaorui.github.io.git
+  repo: git@github.com:chenqiaorui/chenqiaorui.github.io.git
   branch: master
