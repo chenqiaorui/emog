@@ -37,6 +37,7 @@ https://logomakerr.ai/
 鼠标键盘显示：https://github.com/mulaRahul/keyviz
 自建手机照片和视频备份服务 https://github.com/immich-app/immich
 视频剪辑工具：https://github.com/mifi/lossless-cut
+B站视频下载工具：https://github.com/leiurayer/downkyi
 
 ios 侧重于产品对人们的价值
 盲人产品  
