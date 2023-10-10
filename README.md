@@ -35,7 +35,7 @@ https://logomakerr.ai/
 ```
 剪辑 工具使用讲解 知识课程讲解 影视讲解 更多项目 vpn/周刊/
 鼠标键盘显示：https://github.com/mulaRahul/keyviz
-
+自建手机照片和视频备份服务 https://github.com/immich-app/immich
 
 ios 侧重于产品对人们的价值
 盲人产品  
