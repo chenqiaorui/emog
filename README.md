@@ -50,6 +50,7 @@ ai
 生产工业化产品 人应该是高效的而非用生产力来衡量
 课程教学 支持web和移动端在线练习 https://github.com/chenqiaorui/PlayEdu
 关于产品的思考 https://produck.zhubai.love/
+设计所有资源：https://github.com/bradtraversy/design-resources-for-developers
 ```
 
 
