@@ -53,6 +53,7 @@ ai
 设计所有资源：https://github.com/bradtraversy/design-resources-for-developers
 
 键盘打字记单词：https://github.com/RealKai42/qwerty-learner
+桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
 ```
 
 
