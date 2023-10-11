@@ -38,6 +38,8 @@ https://logomakerr.ai/
 自建手机照片和视频备份服务 https://github.com/immich-app/immich
 视频剪辑工具：https://github.com/mifi/lossless-cut
 B站视频下载工具：https://github.com/leiurayer/downkyi
+本地媒体资源库管理： https://github.com/jellyfin/jellyfin
+
 
 ios 侧重于产品对人们的价值
 盲人产品  
