@@ -56,5 +56,62 @@ ai
 键盘打字记单词：https://github.com/RealKai42/qwerty-learner
 桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
 ```
+```
+Docker&Kubernetes小记
+
+视频时常21小时，共19个章节，大纲如下：
+第一章：Docker 简介与安装
+
+第二章：了解 Docker Client 中基本命令
+
+第三章：了解 Dockerfile
+
+第四章：构建自定义镜像（NodeJS Demo）
+
+第五章：了解 Docker Compose
+
+第六章：构建自定义镜像+（Nginx + React）
+
+第七章：持续集成与部署（Travis CI + AWS Elastic Beanstalk）
+
+第八章：多容器应用：准备阶段（Nginx + React + Express + Postgres + Redis）
+
+第九章：多容器应用：与 Docker 结合
+
+第十章：多容器应用：持续集成
+
+第十一章：多容器应用：部署至 AWS
+
+第十二章：Kubernetes 介绍与安装
+
+第十三章：了解 Kubernetes 配置
+
+第十四章：多容器应用：Kubernetes 开发环境搭建
+
+第十五章：了解 Ingress 与 Ingress Nginx 配置
+
+第十六章：Kubernetes 生产环境部署（Google Cloud）
+
+第十七章：网站域名与证书配置
+
+第十八章：介绍 Skaffold
+
+第十九章：结语
+
+第一章：Docker 简介与安装
+Docker 是什么？
+
+Docker 是一个生态，这个生态专注于管理 Containers（容器）。
+
+为什么用 Docker？
+
+第二章：了解 Docker Client 中基本命令
+本章通过学习 8 个命令的基础使用方式来熟悉 Docker Client。
+
+- docker run
+...
+
+参考：https://www.bilibili.com/read/cv21266100/
+```
 
 
