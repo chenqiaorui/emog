@@ -39,6 +39,7 @@ https://logomakerr.ai/
 视频剪辑工具：https://github.com/mifi/lossless-cut
 B站视频下载工具：https://github.com/leiurayer/downkyi
 本地媒体资源库管理： https://github.com/jellyfin/jellyfin
+youtube下载器：[YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 
 
 ios 侧重于产品对人们的价值
