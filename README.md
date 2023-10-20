@@ -57,6 +57,7 @@ ai
 键盘打字记单词：https://github.com/RealKai42/qwerty-learner
 桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
 免费的编程中文书籍索引：https://github.com/justjavac/free-programming-books-zh_CN
+提高英语技能：https://github.com/byoungd/English-level-up-tips
 ```
 ```
 Docker&Kubernetes小记
