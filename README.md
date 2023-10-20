@@ -58,6 +58,7 @@ ai
 桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
 免费的编程中文书籍索引：https://github.com/justjavac/free-programming-books-zh_CN
 提高英语技能：https://github.com/byoungd/English-level-up-tips
+Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
 ```
 ```
 Docker&Kubernetes小记
