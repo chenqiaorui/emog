@@ -53,6 +53,8 @@ ai
 关于产品的思考 https://produck.zhubai.love/
 设计所有资源：https://github.com/bradtraversy/design-resources-for-developers
 翻墙工具：https://github.com/Dreamacro/clash
+实时换脸：https://github.com/iperov/DeepFaceLive
+aws指导：https://github.com/open-guides/og-aws
 
 键盘打字记单词：https://github.com/RealKai42/qwerty-learner
 桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
