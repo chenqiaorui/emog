@@ -62,6 +62,7 @@ aws指导：https://github.com/open-guides/og-aws
 提高英语技能：https://github.com/byoungd/English-level-up-tips
 Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
 运维实践指南：https://billwang139967.gitbooks.io/op_practice_book/content/
+小程序资源汇总：https://github.com/justjavac/awesome-wechat-weapp
 ```
 ```
 Docker&Kubernetes小记
