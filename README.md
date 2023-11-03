@@ -55,6 +55,7 @@ ai
 翻墙工具：https://github.com/Dreamacro/clash
 实时换脸：https://github.com/iperov/DeepFaceLive
 aws指导：https://github.com/open-guides/og-aws
+Html 和 CSS 图文教程：https://internetingishard.netlify.app/html-and-css/
 
 键盘打字记单词：https://github.com/RealKai42/qwerty-learner
 桌面视频播放器：https://github.com/Hunlongyu/ZY-Player
