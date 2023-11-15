@@ -72,8 +72,8 @@ siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docke
 - WP Statistics 统计访问量
 - WP-Optimize 提高网站性能
 - WP Super Cache 生成静态文件缓存
--site kit 用于分析人们如何找到和使用您的站点
-
+- site kit 用于分析人们如何找到和使用您的站点
+- WooCommerce 电子商务插件
 ```
 Docker&Kubernetes小记
 
