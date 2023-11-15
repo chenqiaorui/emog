@@ -65,7 +65,15 @@ Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
 运维实践指南：https://billwang139967.gitbooks.io/op_practice_book/content/
 小程序资源汇总：https://github.com/justjavac/awesome-wechat-weapp
 外语视频转成中文视频：https://www.youtube-dubbing.com/（英文语音转成中文）
-```
+
+siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docker-compose/tree/master)
+[wordpress中文官网](https://cn.wordpress.org/)
+插件：
+- WP Statistics 统计访问量
+- WP-Optimize 提高网站性能
+- WP Super Cache 生成静态文件缓存
+-site kit 用于分析人们如何找到和使用您的站点
+
 ```
 Docker&Kubernetes小记
 
