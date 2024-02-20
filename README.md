@@ -42,6 +42,7 @@ B站视频下载工具：https://github.com/leiurayer/downkyi
 youtube下载器：[YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 
+一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
 ios 侧重于产品对人们的价值
 盲人产品  
