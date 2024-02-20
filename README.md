@@ -40,6 +40,7 @@ https://logomakerr.ai/
 B站视频下载工具：https://github.com/leiurayer/downkyi
 本地媒体资源库管理： https://github.com/jellyfin/jellyfin
 youtube下载器：[YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
+gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 
 浏览器广告拦截：https://github.com/gorhill/uBlock
 ios 侧重于产品对人们的价值
