@@ -41,6 +41,7 @@ B站视频下载工具：https://github.com/leiurayer/downkyi
 本地媒体资源库管理： https://github.com/jellyfin/jellyfin
 youtube下载器：[YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
+跨平台文件传送软件，不需要互联网连接，依靠共享 Wifi 分享文件：https://localsend.org/#/
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
