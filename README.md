@@ -47,6 +47,7 @@ gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 免费图片搜索引擎，现在还提供免费音乐和视频下载，可以用于商业用途，适合作为视频的背景音乐和素材：https://pixabay.com/
 图片和音频的搜索引擎,自由使用，不用付费：https://openverse.org/
 测速网站：https://test.ustc.edu.cn/
+剪辑视频，自动生成字幕：https://github.com/mli/autocut
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
