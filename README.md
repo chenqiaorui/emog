@@ -44,6 +44,7 @@ gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 跨平台文件传送软件，不需要互联网连接，依靠共享 Wifi 分享文件：https://localsend.org/#/
 私藏英语工具文章：https://sspai.com/post/80086
 免费gpt：https://chatgptdemo.info/chat/    https://promptboom.com/PowerChat/PowerChatTalk
+免费图片搜索引擎，现在还提供免费音乐和视频下载，可以用于商业用途，适合作为视频的背景音乐和素材：https://pixabay.com/
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
