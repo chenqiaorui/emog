@@ -54,6 +54,7 @@ gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 ios 侧重于产品对人们的价值
 盲人产品  
 ai
+生成excel公式：https://github.com/weijunext/smart-excel-ai
 生成节日祝福个性视频 https://shotstack.io/learn/how-to-build-1000-personalised-videos/
 提升照片分辨率 https://github.com/Djdefrag/QualityScaler
 博客 compose/ 图片搜索引擎https://openverse.org/ ai作图搜索https://lexica.art/
