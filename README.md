@@ -85,6 +85,7 @@ Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
 免费接码平台：https://iyideng.fun/welfare/best-domestic-platform-for-receiving-captcha-free-of-charge.html
 es同步工具：https://github.com/elasticsearch-dump/elasticsearch-dump
 完全基于本地构建的 GPT，可以将本地知识库作为问答的原料：https://github.com/PromtEngineer/localGPT
+openldap 介绍和使用：https://outmanzzq.github.io/2020/05/12/openldap/
 
 siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docker-compose/tree/master)
 [wordpress中文官网](https://cn.wordpress.org/)
