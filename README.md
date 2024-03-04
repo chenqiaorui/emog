@@ -48,6 +48,7 @@ gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 图片和音频的搜索引擎,自由使用，不用付费：https://openverse.org/
 测速网站：https://test.ustc.edu.cn/
 剪辑视频，自动生成字幕：https://github.com/mli/autocut
+数据库教程：https://www.sjkjc.com/
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
