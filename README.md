@@ -83,6 +83,7 @@ Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
 英语音频转成文本的在线工具：https://huggingface.co/spaces/Xenova/whisper-web
 让 Mac 电脑具备 Windows 的 alt + tab 键的功能：https://github.com/lwouis/alt-tab-macos
 免费接码平台：https://iyideng.fun/welfare/best-domestic-platform-for-receiving-captcha-free-of-charge.html
+es同步工具：https://github.com/elasticsearch-dump/elasticsearch-dump
 
 siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docker-compose/tree/master)
 [wordpress中文官网](https://cn.wordpress.org/)
