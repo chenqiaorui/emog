@@ -50,6 +50,7 @@ gpt4模型体验，需要登陆：https://www.yeschat.ai/zh-CN
 剪辑视频，自动生成字幕：https://github.com/mli/autocut
 数据库教程：https://www.sjkjc.com/
 k8s博客：https://www.soulchild.cn/
+运维侃侃：https://www.yuque.com/sanye-ia8oj/hmoxce
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
