@@ -78,6 +78,7 @@ Html 和 CSS 图文教程：https://internetingishard.netlify.app/html-and-css/
 免费的编程中文书籍索引：https://github.com/justjavac/free-programming-books-zh_CN
 提高英语技能：https://github.com/byoungd/English-level-up-tips
 Kubernetes 中文指南：https://jimmysong.io/kubernetes-handbook/
+Kubernetes：https://zhangzhuo.ltd/tags/kubernetes
 运维实践指南：https://billwang139967.gitbooks.io/op_practice_book/content/
 小程序资源汇总：https://github.com/justjavac/awesome-wechat-weapp
 外语视频转成中文视频：https://www.youtube-dubbing.com/（英文语音转成中文）
