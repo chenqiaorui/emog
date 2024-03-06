@@ -1,5 +1,5 @@
 ---
-title: 第三期：Python学习
+title: 第3期：Python学习
 date: 2023-05-18 14:00:32
 tags:
 ---
