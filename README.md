@@ -52,14 +52,11 @@ jenkins pipeline：https://zhangzhuo.ltd/articles/2022/06/04/1654333399919.html
 
 一个 Chrome 插件，可以将 YouTube 视频的英文语音，转成中文语音：https://www.youtube-dubbing.com/
 浏览器广告拦截：https://github.com/gorhill/uBlock
-ios 侧重于产品对人们的价值
-盲人产品  
-ai
 生成excel公式：https://github.com/weijunext/smart-excel-ai
 生成节日祝福个性视频 https://shotstack.io/learn/how-to-build-1000-personalised-videos/
 提升照片分辨率 https://github.com/Djdefrag/QualityScaler
-博客 compose/ 图片搜索引擎https://openverse.org/ ai作图搜索https://lexica.art/
-生产工业化产品 人应该是高效的而非用生产力来衡量
+图片搜索引擎https://openverse.org/
+ai作图搜索https://lexica.art/
 课程教学 支持web和移动端在线练习 https://github.com/chenqiaorui/PlayEdu
 关于产品的思考 https://produck.zhubai.love/
 设计所有资源：https://github.com/bradtraversy/design-resources-for-developers
@@ -84,7 +81,6 @@ Kubernetes：https://zhangzhuo.ltd/tags/kubernetes
 es同步工具：https://github.com/elasticsearch-dump/elasticsearch-dump
 完全基于本地构建的 GPT，可以将本地知识库作为问答的原料：https://github.com/PromtEngineer/localGPT
 openldap 介绍和使用：https://outmanzzq.github.io/2020/05/12/openldap/
-
 siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docker-compose/tree/master)
 [wordpress中文官网](https://cn.wordpress.org/)
 插件：
@@ -94,9 +90,3 @@ siteground: [wordpress-docker-compose](https://github.com/nezhar/wordpress-docke
 - site kit 用于分析人们如何找到和使用您的站点
 - WooCommerce 电子商务插件
 ```
-...
-
-参考：https://www.bilibili.com/read/cv21266100/
-```
-
-
