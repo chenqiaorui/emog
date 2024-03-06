@@ -161,3 +161,6 @@ comment:
 #     url: http://www.example2.com/
 #   - title: site-name3
 #     url: http://www.example3.com/
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true		# 一般默认为true
