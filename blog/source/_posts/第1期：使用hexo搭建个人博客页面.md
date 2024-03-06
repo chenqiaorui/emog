@@ -1,5 +1,5 @@
 ---
-title: 第一期：使用hexo搭建个人博客页面
+title: 第1期：使用hexo搭建个人博客页面
 date: 2023-05-18 10:52:04
 tags:
 ---
@@ -14,7 +14,7 @@ $ cd blog
 ### 创建页面
 
 ``` bash
-$ hexo new "第一期：使用hexo搭建个人博客页面"
+$ hexo new "第1期：使用hexo搭建个人博客页面"
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
