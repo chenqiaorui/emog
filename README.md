@@ -12,6 +12,10 @@ cd blog
 # 依赖
 npm install
 
+# cli安装
+参考[博客框架](https://hexo.io/zh-cn/)
+
+npm install hexo-cli -g
 # 运行
 hexo server
 

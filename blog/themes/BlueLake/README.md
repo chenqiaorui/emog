@@ -216,7 +216,7 @@ links:
 - `valine` - Valine评论配置
 - `changyan` - 畅言评论配置
 - `comment`- 其他评论配置
-- `links` - 友情链接
+<!-- - `links` - 友情链接 -->
 
 
 ## 站点配置
