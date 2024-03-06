@@ -34,3 +34,22 @@ hexo deploy
 ### 一键提交并发布
 
 cd .. ; git add . ; git commit -m"update" ; git push ; cd blog ; hexo clean ; hexo deploy
+
+### issue
+
+Q: 1.首页文章内容长度
+hexo-excerpt
+
+A: npm install hexo-excerpt --save
+
+_config.yml添加内容：
+
+```
+#自动在首页对文章进行摘要描述作为前言文本
+excerpt:
+  depth: 3 #摘要的内容多少
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
+```
+

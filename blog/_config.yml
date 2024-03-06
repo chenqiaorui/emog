@@ -125,3 +125,10 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+
+#自动在首页对文章进行摘要描述作为前言文本
+excerpt:
+  depth: 3 #摘要的内容多少
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
