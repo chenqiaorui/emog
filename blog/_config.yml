@@ -127,6 +127,8 @@ jsonContent:
     tags: true
 
 #自动在首页对文章进行摘要描述作为前言文本
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
 excerpt:
   depth: 3 #摘要的内容多少
   excerpt_excludes: []
