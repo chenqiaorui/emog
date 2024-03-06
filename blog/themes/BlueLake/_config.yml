@@ -19,9 +19,9 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
-  - page: about
-    directory: about/
-    icon: fa-user
+  # - page: about
+  #   directory: about/
+  #   icon: fa-user
   # - page: rss
   #   directory: atom.xml
   #   icon: fa-rss
@@ -32,8 +32,8 @@ Plugins:
   hexo-generator-sitemap
 
 # Sitemap
-sitemap:
-  path: sitemap.xml
+# sitemap:
+#   path: sitemap.xml
 
 # Content
 excerpt_link: Read More
@@ -154,10 +154,10 @@ comment:
   cloudTie: ## 网易云跟帖(productKey)
 
 # Friend Links widget. Empty links will hide widget.
-links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+# links:
+#   - title: site-name1
+#     url: http://www.example1.com/
+#   - title: site-name2
+#     url: http://www.example2.com/
+#   - title: site-name3
+#     url: http://www.example3.com/
