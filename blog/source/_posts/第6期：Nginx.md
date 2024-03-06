@@ -1,5 +1,5 @@
 ---
-title: 第六期：Nginx
+title: 第6期：Nginx
 date: 2023-05-20 00:42:05
 tags:
 ---

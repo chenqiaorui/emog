@@ -1,5 +1,5 @@
 ---
-title: 第十期：VIM
+title: 第10期：VIM
 date: 2023-05-20 18:50:15
 tags:
 ---

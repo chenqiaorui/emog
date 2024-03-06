@@ -37,10 +37,11 @@ cd .. ; git add . ; git commit -m"update" ; git push ; cd blog ; hexo clean ; he
 
 ### issue
 
-Q: 1.首页文章内容长度
-hexo-excerpt
+#### Q: 1.首页文章内容长度过长
 
-A: npm install hexo-excerpt --save
+A: 安装hexo-excerpt插件解决：
+
+npm install hexo-excerpt --save
 
 _config.yml添加内容：
 

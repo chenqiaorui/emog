@@ -1,5 +1,5 @@
 ---
-title: 第七期：dns
+title: 第7期：dns
 date: 2023-05-20 01:09:12
 tags:
 ---

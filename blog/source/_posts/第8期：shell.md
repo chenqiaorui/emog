@@ -1,5 +1,5 @@
 ---
-title: 第八期：shell
+title: 第8期：shell
 date: 2023-05-20 09:27:34
 tags:
 ---

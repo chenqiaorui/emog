@@ -1,5 +1,5 @@
 ---
-title: '第二期: hexo + github部署个人博客'
+title: '第2期: hexo + github部署个人博客'
 date: 2023-05-18 12:29:50
 tags:
 ---
