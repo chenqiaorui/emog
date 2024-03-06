@@ -33,4 +33,4 @@ hexo deploy
 
 ### 一键提交并发布
 
-git add . ; git commit -m"update" ; git push ; cd blog ; hexo clean ; hexo deploy
+cd .. ; git add . ; git commit -m"update" ; git push ; cd blog ; hexo clean ; hexo deploy
